@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const StyledHeader = styled.header`
   background-color: ${({ theme }) => theme.colors.primary};
   box-shadow: inset 0 0 10rem 0.25rem #500;
-  padding: 1rem;
   color: white;
 
   background-image: url('banner.png');
@@ -19,7 +18,6 @@ export const StyledHeader = styled.header`
 
 export const TextContent = styled.div`
   max-width: 100%;
-  margin-left: 1em;
   padding-bottom: 2em;
 
   @media screen and (min-width: 400px) {

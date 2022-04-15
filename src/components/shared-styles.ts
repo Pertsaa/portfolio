@@ -8,8 +8,12 @@ export const Section = styled.section`
   }
 `;
 
-export const Container = styled.div`
-  width: min(80%, 600px);
+interface ContainerModifiers {
+  wide?: boolean;
+}
+
+export const Container = styled.div<ContainerModifiers>`
+  width: ${({ wide }) => (wide ? 'min(80%, 1000px)' : 'min(80%, 600px)')};
   margin: 0 auto;
 `;
 
@@ -18,7 +22,11 @@ export const Title = styled.h2`
   text-align: center;
 `;
 
-export const Paragraph = styled.p`
+interface ParagraphModifiers {
+  alignCenter?: boolean;
+}
+
+export const Paragraph = styled.p<ParagraphModifiers>`
   color: ${({ theme }) => theme.colors.text.light};
-  text-align: center;
+  text-align: ${({ alignCenter }) => (alignCenter ? 'center' : 'start')};
 `;

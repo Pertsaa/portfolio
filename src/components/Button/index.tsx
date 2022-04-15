@@ -4,12 +4,13 @@ import { StyledButton } from './styles';
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   href?: string;
+  target?: string;
 }
 
 const Button: FC<ButtonProps> = (props) => {
   if (props.href) {
     return (
-      <StyledButton as="a" href={props.href}>
+      <StyledButton as="a" href={props.href} target={props.target}>
         {props.children}
       </StyledButton>
     );

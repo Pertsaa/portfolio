@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const StyledButton = styled.button`
   display: inline-block;
-  background-color: ${({ theme }) => theme.colors.secondaryAccent};
+  background-color: #eee;
   color: ${({ theme }) => theme.colors.text.dark};
   border-radius: 0.3em 1.5em;
   border: none;

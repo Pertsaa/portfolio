@@ -7,7 +7,7 @@ const About: FC = () => {
     <Section>
       <Container>
         <Title>About me</Title>
-        <Paragraph>
+        <Paragraph alignCenter>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores
           autem aspernatur explicabo placeat accusantium ipsum similique
           deleniti ducimus. Minus, alias.
