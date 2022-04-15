@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Section = styled.section`
-  padding: 2rem 0;
+  padding: 4rem 0;
 
   &:nth-child(2n + 1) {
     background-color: ${({ theme }) => theme.colors.secondaryAccent};
@@ -13,7 +13,7 @@ interface ContainerModifiers {
 }
 
 export const Container = styled.div<ContainerModifiers>`
-  width: ${({ wide }) => (wide ? 'min(80%, 1000px)' : 'min(80%, 600px)')};
+  width: ${({ wide }) => (wide ? 'min(80%, 1400px)' : 'min(80%, 800px)')};
   margin: 0 auto;
 `;
 

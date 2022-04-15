@@ -18,9 +18,9 @@ export const StyledHeader = styled.header`
 
 export const TextContent = styled.div`
   max-width: 100%;
-  padding-bottom: 2em;
+  padding: 6em 0;
 
-  @media screen and (min-width: 400px) {
+  @media screen and (min-width: 600px) {
     max-width: 40%;
   }
 `;

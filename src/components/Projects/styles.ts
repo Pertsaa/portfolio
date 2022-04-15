@@ -8,4 +8,8 @@ export const ProjectGrid = styled.div`
   @media screen and (min-width: 800px) {
     grid-template-columns: 1fr 1fr;
   }
+
+  @media screen and (min-width: 1400px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 `;
