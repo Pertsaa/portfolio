@@ -1,7 +1,7 @@
 import { FC } from 'react';
 
 import { Container } from '../shared-styles';
-import { StyledHeader, TextContent } from './styles';
+import { MobileImage, StyledHeader, TextContent } from './styles';
 import Button from '../Button';
 import Nav from '../Nav';
 
@@ -10,6 +10,8 @@ const Header: FC = () => {
     <StyledHeader>
       <Container wide>
         <Nav />
+
+        <MobileImage />
 
         <TextContent>
           <h1>Hi!</h1>
