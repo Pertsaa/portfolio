@@ -13,7 +13,7 @@ interface ContainerModifiers {
 }
 
 export const Container = styled.div<ContainerModifiers>`
-  width: ${({ wide }) => (wide ? 'min(80%, 1400px)' : 'min(80%, 800px)')};
+  width: ${({ wide }) => (wide ? 'min(80%, 1400px)' : 'min(80%, 600px)')};
   margin: 0 auto;
 `;
 

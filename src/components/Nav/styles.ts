@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledNav = styled.nav`
-  padding-top: 1em;
+  padding: 1em 0;
 `;
 
 export const NavList = styled.ul`
