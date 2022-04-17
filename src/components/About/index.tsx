@@ -1,16 +1,25 @@
-import { FC } from 'react';
+import { FC, RefObject } from 'react';
 
 import { Section, Container, Title, Paragraph } from '../shared-styles';
 
-const About: FC = () => {
+interface Props {
+  scrollRef: RefObject<HTMLDivElement>;
+}
+
+const About: FC<Props> = ({ scrollRef }) => {
   return (
-    <Section>
+    <Section ref={scrollRef}>
       <Container>
         <Title>About me</Title>
-        <Paragraph alignCenter>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores
-          autem aspernatur explicabo placeat accusantium ipsum similique
-          deleniti ducimus. Minus, alias.
+        <Paragraph>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi sed
+          incidunt porro aspernatur praesentium officia harum. Aut nemo
+          possimus, nulla quas voluptatum saepe rerum. Facere.
+        </Paragraph>
+        <Paragraph>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus
+          minus accusantium provident autem incidunt asperiores aperiam dolores,
+          ipsam dolorem rerum!
         </Paragraph>
       </Container>
     </Section>

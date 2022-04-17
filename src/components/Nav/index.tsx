@@ -1,19 +1,45 @@
-import { FC } from 'react';
+import { FC, RefObject } from 'react';
 
-import { NavList, Link, StyledNav } from './styles';
+import { NavList, StyledNav, NavLink } from './styles';
 
-const Nav: FC = () => {
+interface Props {
+  scrollRefs: {
+    aboutRef: RefObject<HTMLDivElement>;
+    projectsRef: RefObject<HTMLDivElement>;
+    contactRef: RefObject<HTMLDivElement>;
+  };
+}
+
+const Nav: FC<Props> = ({ scrollRefs }) => {
+  const scrollToAbout = () => {
+    if (scrollRefs.aboutRef && scrollRefs.aboutRef.current) {
+      scrollRefs.aboutRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const scrollToProjects = () => {
+    if (scrollRefs.projectsRef && scrollRefs.projectsRef.current) {
+      scrollRefs.projectsRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const scrollToContact = () => {
+    if (scrollRefs.contactRef && scrollRefs.contactRef.current) {
+      scrollRefs.contactRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <StyledNav>
       <NavList>
         <li>
-          <Link href="#">About</Link>
+          <NavLink onClick={scrollToAbout}>About</NavLink>
         </li>
         <li>
-          <Link href="#">Projects</Link>
+          <NavLink onClick={scrollToProjects}>Projects</NavLink>
         </li>
         <li>
-          <Link href="#">Contact</Link>
+          <NavLink onClick={scrollToContact}>Contact</NavLink>
         </li>
       </NavList>
     </StyledNav>

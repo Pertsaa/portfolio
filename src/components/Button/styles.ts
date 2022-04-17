@@ -15,6 +15,8 @@ export const StyledButton = styled.button`
   text-align: center;
   text-decoration: none;
 
+  transition: all 0.1s ease-in-out;
+
   cursor: pointer;
 
   &:hover {

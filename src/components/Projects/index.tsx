@@ -1,13 +1,17 @@
-import { FC } from 'react';
+import { FC, RefObject } from 'react';
 
 import { projects } from './data';
 import { Container, Section, Title } from '../shared-styles';
 import { ProjectGrid } from './styles';
 import ProjectCard from '../ProjectCard';
 
-const Projects: FC = () => {
+interface Props {
+  scrollRef: RefObject<HTMLDivElement>;
+}
+
+const Projects: FC<Props> = ({ scrollRef }) => {
   return (
-    <Section>
+    <Section ref={scrollRef}>
       <Container wide>
         <Title>Projects</Title>
         <ProjectGrid>

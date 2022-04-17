@@ -1,31 +1,44 @@
-import { FC } from 'react';
+import { FC, RefObject } from 'react';
 
 import { Container } from '../shared-styles';
 import {
   HeaderContent,
-  MobileImage,
+  HeaderImage,
   StyledHeader,
   TextContent,
 } from './styles';
 import Button from '../Button';
 import Nav from '../Nav';
 
-const Header: FC = () => {
+interface Props {
+  scrollRefs: {
+    aboutRef: RefObject<HTMLDivElement>;
+    projectsRef: RefObject<HTMLDivElement>;
+    contactRef: RefObject<HTMLDivElement>;
+  };
+}
+
+const Header: FC<Props> = ({ scrollRefs }) => {
+  const scrollToProjects = () => {
+    if (scrollRefs.projectsRef && scrollRefs.projectsRef.current) {
+      scrollRefs.projectsRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <StyledHeader>
       <Container wide>
-        <Nav />
+        <Nav scrollRefs={scrollRefs} />
 
         <HeaderContent>
-          <MobileImage />
-
+          <HeaderImage />
           <TextContent>
-            <h1>Hi!</h1>
+            <h1>Hi! I'm Perttu!</h1>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
-              dolore ad nihil tempora, provident repellendus.
+              I'm a web developer from Tampere, Finland. On this site you can
+              find some of my recent projects!
             </p>
-            <Button href="#">Contact me</Button>
+            <Button onClick={scrollToProjects}>To projects</Button>
           </TextContent>
         </HeaderContent>
       </Container>

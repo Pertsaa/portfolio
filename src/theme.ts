@@ -7,7 +7,7 @@ export const theme: DefaultTheme = {
     secondary: '#ffffff',
     secondaryAccent: '#f5f5f5',
     text: {
-      primary: '#bb4422',
+      primary: 'coral',
       dark: '#444',
       light: '#999',
     },

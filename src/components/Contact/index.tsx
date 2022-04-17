@@ -1,15 +1,29 @@
-import { FC } from 'react';
+import { FC, RefObject } from 'react';
 
 import { Section, Container, Title, Paragraph } from '../shared-styles';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { ContactLink, LinksContainer } from './styles';
 
-const Contact: FC = () => {
+interface Props {
+  scrollRef: RefObject<HTMLDivElement>;
+}
+
+const Contact: FC<Props> = ({ scrollRef }) => {
   return (
-    <Section>
+    <Section ref={scrollRef}>
       <Container>
-        <Title>Contact</Title>
-        <Paragraph>
-          If youd like to work with me you can reach me from links below!
+        <Title>Wan't to work with me?</Title>
+        <Paragraph alignCenter>
+          You can reach me on LinkedIn and GitHub!
         </Paragraph>
+        <LinksContainer>
+          <ContactLink href="#">
+            <FaLinkedin size={40} />
+          </ContactLink>
+          <ContactLink href="https://github.com/Pertsaa" target="_blank">
+            <FaGithub size={40} />
+          </ContactLink>
+        </LinksContainer>
       </Container>
     </Section>
   );
