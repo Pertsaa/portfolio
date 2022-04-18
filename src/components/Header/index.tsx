@@ -1,6 +1,6 @@
 import { FC, RefObject } from 'react';
 
-import { Container } from '../shared-styles';
+import { Container, Paragraph } from '../shared-styles';
 import {
   HeaderContent,
   HeaderImage,
@@ -34,10 +34,10 @@ const Header: FC<Props> = ({ scrollRefs }) => {
           <HeaderImage />
           <TextContent>
             <h1>Hi! I'm Perttu!</h1>
-            <p>
+            <Paragraph justify>
               I'm a web developer from Tampere, Finland. On this site you can
               find some of my recent projects!
-            </p>
+            </Paragraph>
             <Button onClick={scrollToProjects}>To projects</Button>
           </TextContent>
         </HeaderContent>

@@ -8,7 +8,7 @@ export const StyledButton = styled.button`
   border: none;
   padding: 0.75em 2em;
 
-  font-size: 0.835rem;
+  font-size: 0.875rem;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.1em;

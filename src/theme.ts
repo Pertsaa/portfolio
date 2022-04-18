@@ -8,8 +8,8 @@ export const theme: DefaultTheme = {
     secondaryAccent: '#f5f5f5',
     text: {
       primary: 'coral',
-      dark: '#444',
-      light: '#999',
+      dark: '#333',
+      light: '#888',
     },
   },
 };

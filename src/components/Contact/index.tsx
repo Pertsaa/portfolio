@@ -12,16 +12,19 @@ const Contact: FC<Props> = ({ scrollRef }) => {
   return (
     <Section ref={scrollRef}>
       <Container>
-        <Title>Wan't to work with me?</Title>
+        <Title>Would you like to work with me?</Title>
         <Paragraph alignCenter>
           You can reach me on LinkedIn and GitHub!
         </Paragraph>
         <LinksContainer>
-          <ContactLink href="#">
-            <FaLinkedin size={40} />
+          <ContactLink
+            href="https://www.linkedin.com/in/perttu-autti-198049238/"
+            target="_blank"
+          >
+            <FaLinkedin size={40} title="LinkedIn logo" />
           </ContactLink>
           <ContactLink href="https://github.com/Pertsaa" target="_blank">
-            <FaGithub size={40} />
+            <FaGithub size={40} title="GitHub logo" />
           </ContactLink>
         </LinksContainer>
       </Container>

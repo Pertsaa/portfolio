@@ -4,20 +4,18 @@ export const StyledHeader = styled.header`
   background-color: ${({ theme }) => theme.colors.primary};
   box-shadow: inset 0 0 10rem 0.25rem #500;
   color: white;
-  padding-bottom: 4rem;
 `;
 
 export const HeaderContent = styled.div`
   display: grid;
-  max-width: 800px;
-  margin: 4rem auto;
+  padding: 4rem 0;
   grid-template-columns: 1fr;
   align-items: center;
   justify-items: center;
 
   @media screen and (min-width: 600px) {
     grid-template-columns: 1fr 1fr;
-    justify-items: start;
+    justify-items: center;
   }
 `;
 
@@ -29,13 +27,14 @@ export const HeaderImage = styled.div`
   border: 5px solid white;
   border-radius: 50%;
 
-  background-image: url('banner.png');
+  background-image: url('banner.webp');
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 80%;
+  background-position: 50% 1rem;
 `;
 
 export const TextContent = styled.div`
   display: flex;
   flex-direction: column;
+  margin: 2rem 0;
 `;

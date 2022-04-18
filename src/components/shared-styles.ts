@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const Section = styled.section`
   padding: 4rem 0;
+  color: ${({ theme }) => theme.colors.text.light};
 
   &:nth-child(2n + 1) {
     background-color: ${({ theme }) => theme.colors.secondaryAccent};
@@ -13,7 +14,7 @@ interface ContainerModifiers {
 }
 
 export const Container = styled.div<ContainerModifiers>`
-  width: ${({ wide }) => (wide ? 'min(80%, 1400px)' : 'min(80%, 800px)')};
+  width: ${({ wide }) => (wide ? 'min(80%, 1200px)' : 'min(80%, 600px)')};
   margin: 0 auto;
 `;
 
@@ -25,11 +26,12 @@ export const Title = styled.h2`
 
 interface ParagraphModifiers {
   alignCenter?: boolean;
+  justify?: boolean;
 }
 
 export const Paragraph = styled.p<ParagraphModifiers>`
-  color: ${({ theme }) => theme.colors.text.light};
-  text-align: ${({ alignCenter }) => (alignCenter ? 'center' : 'start')};
+  text-align: ${({ alignCenter, justify }) =>
+    alignCenter ? 'center' : justify ? 'justify' : 'start'};
 `;
 
 export const A = styled.a`
