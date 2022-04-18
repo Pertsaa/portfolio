@@ -27,7 +27,7 @@ export const HeaderImage = styled.div`
   border: 5px solid white;
   border-radius: 50%;
 
-  background-image: url('./banner.webp');
+  background-image: url('/banner.webp');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 1rem;
