@@ -128,7 +128,7 @@ Add a <Suspense fallback=...> component higher in the tree to provide a loading 
   background-image: url('/portfolio/banner.webp');
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 50% 1rem;
+  background-position: 50%;
 `,eh=ie.div`
   display: flex;
   flex-direction: column;
