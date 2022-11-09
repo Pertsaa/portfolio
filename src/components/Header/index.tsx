@@ -1,14 +1,14 @@
 import { FC, RefObject } from 'react';
 
+import Button from '../Button';
+import Nav from '../Nav';
 import { Container, Paragraph } from '../shared-styles';
 import {
   HeaderContent,
   HeaderImage,
   StyledHeader,
-  TextContent,
+  TextContent
 } from './styles';
-import Button from '../Button';
-import Nav from '../Nav';
 
 interface Props {
   scrollRefs: {
@@ -35,8 +35,8 @@ const Header: FC<Props> = ({ scrollRefs }) => {
           <TextContent>
             <h1>Hi! I'm Perttu!</h1>
             <Paragraph justify>
-              I'm a web developer from Tampere, Finland. On this site you can
-              find some of my recent projects!
+              I'm a full stack web developer from Tampere, Finland. On this site you can
+              find some of my most recent projects!
             </Paragraph>
             <Button onClick={scrollToProjects}>To projects</Button>
           </TextContent>

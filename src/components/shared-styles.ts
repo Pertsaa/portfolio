@@ -19,7 +19,7 @@ export const Container = styled.div<ContainerModifiers>`
 `;
 
 export const Title = styled.h2`
-  color: coral;
+  color: ${({ theme }) => theme.colors.text.primary};
   text-align: center;
   margin-top: 0;
 `;

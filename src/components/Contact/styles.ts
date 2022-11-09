@@ -17,7 +17,7 @@ export const ContactLink = styled.a`
   &:hover,
   &:focus {
     transform: scale(0.98);
-    color: coral;
+    color: ${p => p.theme.colors.text.primary};
     outline: none;
   }
 `;
